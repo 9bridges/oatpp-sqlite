@@ -9,7 +9,7 @@ set(OATPP_THIS_MODULE_VERSION "1.3.0") ## version of the module (also sufix of f
 set(OATPP_THIS_MODULE_LIBRARIES oatpp-sqlite) ## list of libraries to find when find_package is called
 set(OATPP_THIS_MODULE_TARGETS oatpp-sqlite) ## list of targets to install
 set(OATPP_THIS_MODULE_DIRECTORIES oatpp-sqlite) ## list of directories to install
-set(CMAKE_NO_SYSTEM_FROM_IMPORTED ON)
+set(OATPP_SQLITE_AMALGAMATION ON)
 
 ###################################################################################################
 
@@ -46,6 +46,7 @@ set(OATPP_MODULES_LOCATION_INSTALLED INSTALLED)
 set(OATPP_MODULES_LOCATION_EXTERNAL EXTERNAL)
 set(OATPP_MODULES_LOCATION_CUSTOM CUSTOM)
 if ("${CMAKE_SYSTEM_NAME}" STREQUAL "AIX")
+    set(CMAKE_NO_SYSTEM_FROM_IMPORTED ON)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -mpowerpc64 -maix64 -pthread -static-libgcc -static-libstdc++")
     set(CMAKE_CXX_ARCHIVE_CREATE "<CMAKE_AR> -X64 -r -v -o  <TARGET> <LINK_FLAGS> <OBJECTS>")
     set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS}  -mpowerpc64 -maix64 -pthread -static-libgcc -static-libstdc++")
