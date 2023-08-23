@@ -9,7 +9,7 @@ set(OATPP_THIS_MODULE_VERSION "1.3.0") ## version of the module (also sufix of f
 set(OATPP_THIS_MODULE_LIBRARIES oatpp-sqlite) ## list of libraries to find when find_package is called
 set(OATPP_THIS_MODULE_TARGETS oatpp-sqlite) ## list of targets to install
 set(OATPP_THIS_MODULE_DIRECTORIES oatpp-sqlite) ## list of directories to install
-
+set(OATPP_SQLITE_AMALGAMATION ON)
 ###################################################################################################
 
 project(${OATPP_THIS_MODULE_NAME}
